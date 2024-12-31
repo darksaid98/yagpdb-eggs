@@ -1,0 +1,152 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-12-31T20:13:39+00:00",
+    "name": "YAGPDB - Yet Another General Purpose Discord Bot",
+    "author": "shermansworldmc@gmail.com",
+    "description": null,
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/darksaid98\/yolks:bot_yagpdb": "ghcr.io\/darksaid98\/yolks:bot_yagpdb"
+    },
+    "file_denylist": [],
+    "startup": "yagpdb {{ARGUMENTS}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"starting\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n\r\n# Server Files: \/mnt\/server",
+            "container": "debian:bullseye-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "YAGPDB_OWNER",
+            "description": "",
+            "env_variable": "YAGPDB_OWNER",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_CLIENTID",
+            "description": "",
+            "env_variable": "YAGPDB_CLIENTID",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_CLIENTSECRET",
+            "description": "",
+            "env_variable": "YAGPDB_CLIENTSECRET",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_BOTTOKEN",
+            "description": "",
+            "env_variable": "YAGPDB_BOTTOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_HOST",
+            "description": "",
+            "env_variable": "YAGPDB_HOST",
+            "default_value": "yagpdb.example.com",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_EMAIL",
+            "description": "",
+            "env_variable": "YAGPDB_EMAIL",
+            "default_value": "example@mail.com",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|email",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_PQHOST",
+            "description": "",
+            "env_variable": "YAGPDB_PQHOST",
+            "default_value": "localhost:5432",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_PQUSERNAME",
+            "description": "",
+            "env_variable": "YAGPDB_PQUSERNAME",
+            "default_value": "admin",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_PQPASSWORD",
+            "description": "",
+            "env_variable": "YAGPDB_PQPASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:200",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_PQDB",
+            "description": "",
+            "env_variable": "YAGPDB_PQDB",
+            "default_value": "yagpdb",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "YAGPDB_REDIS",
+            "description": "",
+            "env_variable": "YAGPDB_REDIS",
+            "default_value": "localhost:6379",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80",
+            "field_type": "text"
+        },
+        {
+            "name": "Startup Command",
+            "description": "",
+            "env_variable": "ARGUMENTS",
+            "default_value": "-all -exthttps=true -https=false -ts",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:200",
+            "field_type": "text"
+        }
+    ]
+}
